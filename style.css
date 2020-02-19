@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
+body{
+
+    background-color: black;
+    margin:0;
+    color:white;
+    padding:0;
+}
+.page1{
+    height: 100vh;
+}
+.navbar header,.main-info-section{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+  /* background-color: red; */
+}
+.logo{
+    /* padding-left: 10em; */
+    font-family: 'Montserrat', sans-serif;
+    align-self: center;
+    /* justify-self: center; */
+
+}
+.main-container{
+    width: 80%;
+    margin: auto;
+    /* background-color: blueviolet; */
+ margin-top:40px;
+}
+.logo h1{
+    font-size:2em;
+    font-weight: bold;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    /* margin: 10px; */
+    margin-top:25px;
+   
+
+    align-content: center;
+}
+nav ul li a{
+    margin-left:20px;
+    padding:10px;
+      text-decoration: none;
+      font-size:1.2em;
+      font-family: 'Montserrat';
+    color:white;
+    font-weight: 600;
+}
+/* img{
+    width:200px;
+    height:200px;
+} */
+.text{
+    margin:5em;
+}
+.text h4 {
+    font-size: 2em;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+}
+.text h4 span{
+    color:salmon;
+    font-weight: bolder;
+    font-size:1.25em;
+}
+.text p{
+    font-size: 1.4em;
+    line-height: 35px;
+    letter-spacing: 1px;
+}
+.profile-img img{
+width:400px;
+height:400px;
+margin-top: 3em;
+margin-right: 120px;
+}
+.about{
+   margin-top:2px;
+   padding:50px 10px;
+   height: 500px;
+/* background-color: red; */
+}
+
+.skills,.work,.contact,footer,.about{
+    display: none;
+}
+.hello{
+    line-height: 41px;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    font-family:'Roboto';
+
+}
+.about{
+    height: 100vh;
+    background: red;
+}

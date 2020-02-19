@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+body{
+
+    background-color: black;
+    margin:0;
+    color:white;
+    padding:0;
+    
+    
+    .page1{
+        height: 100vh;
+    }
+    
+}
+.main-container{
+    width: 80%;
+    margin: auto;
+    /* background-color: blueviolet; */
+ margin-top:40px;
+
+}
+.navbar header{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    .logo{
+        font-family: 'Montserrat', sans-serif;
+        align-self: center;
+        h1{
+            font-size:2em;
+    font-weight: bold;
+        }
+    }
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    /* margin: 10px; */
+    margin-top:25px;
+   
+
+    align-content: center;
+    li a{
+        margin-left:20px;
+        padding:10px;
+          text-decoration: none;
+          font-size:1.2em;
+          font-family: 'Montserrat';
+        color:white;
+        font-weight: 600;
+        &:active{
+            color: red;
+        }
+       &:hover{
+           animation: navanime 1s infinite;
+       }
+    }
+}
+@keyframes navanime{
+    from{
+        border-bottom: 2px solid salmon;
+    }
+    to{
+        border-bottom: 2px solid red;
+    }
+}
+.text{
+    margin:5em;
+    h4 {
+        font-size: 2em;
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 2px;
+        span{
+            color:salmon;
+            font-weight: bolder;
+            font-size:1.25em;
+        }
+    }
+    p{
+        font-size: 1.4em;
+        line-height: 35px;
+
+        letter-spacing: 2.5px;
+    }
+}
+.icons{
+    // background-color: red;
+    font-size: 2.5rem;
+    width:50vw;
+    display: flex;
+    justify-content: space-evenly;
+    .fa{
+        padding:15px 20px;
+        color: white;
+        border-radius: 5px;
+        // background-color: red;
+        &:hover{
+            color: black;
+            background-color: white;
+        }
+    }
+}
+.profile-img img{
+    width:400px;
+    height:400px;
+    margin-top: 3em;
+    margin-right: 120px;
+    }
+    .main-info-section{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr;
+      /* background-col+9or: red; */
+    }
+    #about{
+        height: 96vh;
+        margin: auto;
+        // background-color: red;
+        padding: 2vh 30px;
+        h1{
+            font-family: 'Montserrat';
+            font-size: 3rem;
+        }
+        .about-me-info{
+            // background-color: red;
+            padding: 20px 0px;
+            ul{
+                list-style: none;
+                 li{
+                     font-size: 1.5rem;
+                     font-family: sans-serif;
+                     margin-bottom: 10px;
+                     letter-spacing: 1px;
+                     line-height: 2rem;
+                 }
+            }
+        }
+    }
+    .contact{
+        height: 88vh;
+        padding: 2vh 0;
+        h1{
+            font-family: 'Montserrat';
+            font-size: 3rem;
+            text-align: center;
+        
+        }
+        form{
+            width: 50%;
+            margin: auto;
+        //  background-color: red;
+         padding: 30px;
+            display: flex;
+            flex-direction: column;
+            input[type="text"],input[type="email"],textarea
+            {
+                margin-bottom: 20px;
+                padding: 15px 10px;
+                font-size:16px;
+                border: none;
+               background-color: rgb(212, 75, 57);
+               color: white;
+                border-radius: 10px;
+                outline: none;
+                &::placeholder{
+                    color: white;
+                    opacity: 0.5;
+                }
+            }
+            input[type="submit"]
+            {
+                width: 10vw;
+                margin: auto;
+                padding: 15px 10px;
+                color: black;
+                background-color: rgb(46, 154, 226);
+                border-radius: 5px;
+                border:none;
+                font-size:20px;
+            }
+        }
+    }
+    footer{
+       height: 5vh;
+    background-color: #999;  
+ 
+    padding: 10px 30px 20px 0px;
+    color: #000;
+    // padding-bottom: 100px;
+p{
+    font-size: 20px;
+    margin-left:20px;
+} 
+}
+.gallery{
+    height: 100vh;
+    padding: 0px 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    position: relative;
+    
+   h1{
+    font-family: 'Montserrat';
+    // background-color: green;
+    width: fit-content;
+    font-size: 3rem;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 10px;
+    border-bottom: 2px solid red; 
+    
+   }
+   span{
+       position: absolute;
+       font-size: 50px;
+      
+   }
+   #leftarrow{
+      position: absolute;
+      top: 50%;
+      left:10%;
+      
+      padding:5px 10px;
+      border-radius: 5px;
+    //   background-color: red;
+      &:hover{
+          background-color: white;
+          color: black;
+      }
+   }
+//    background-color: red;
+   h4{
+       font-size: 20px;
+    text-align: center;
+    font-family: 'Roboto';
+    // margin-top: 50px;
+    z-index: 10;
+   }
+   #rightarrow{
+    position: absolute;
+    top: 50%;
+    right:10%;
+    padding:5px 10px;
+    border-radius: 5px;
+    &:hover{
+        background-color: white;
+        color: black;
+    }
+ } 
+  
+    
+ div{
+    //  background-color: blue;
+     height: 600px;
+     width: 700px;
+     margin: auto;
+     overflow: hidden;
+ }
+        img{
+        margin:auto;
+        position: absolute;
+        left:50%;
+        top:50%;
+        margin-top: 50px;
+        transform: translate(-50%,-50%);
+        height:inherit;
+        width:inherit;   
+    
+    }
+}
+
+.goToTop{
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: salmon;
+    position: sticky;
+    padding: 10px;
+    top: 70vh;
+    left: 85vw;
+ text-align: center;
+ z-index:10;
+//  overflow: hidden;
+// scroll-behavior: smooth;
+    #goToTop{
+        height: 50px;
+        width: 50px;
+        font-size: 35px;
+        text-decoration: none;
+        color: white;
+       
+    }
+}
