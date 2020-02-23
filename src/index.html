@@ -11,6 +11,7 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
 
+
     <title>mubashir__lone</title>
 </head>
 
@@ -24,7 +25,12 @@
                         <h1>mubashir lone</h1>
                     </div>
                     <nav>
-                        <ul>
+                        <div class="hamburger">
+                            <div class="ham-active" id="ham1"></div>
+                            <div class="ham-active" id="ham2"></div>
+                            <div class="ham-active" id="ham3"></div>
+                        </div>
+                        <ul class="nav-closed nav " style="transition:all 1s;">
                             <li><a href="/">Home</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#gallery">Gallery</a></li>
@@ -49,12 +55,13 @@
                 </div>
             </div>
             <div class="icons">
-                <a href="https://www.facebook.com/mubashir.lone.921"> <i class="fa fa-facebook"
+                <a target="_blank" href="https://www.facebook.com/mubashir.lone.921"> <i class="fa fa-facebook"
                         aria-hidden="true"></i></a>
-                <a href="https://www.instagram.com/mub_ashir_lone/"><i class="fa fa-instagram"
+                <a target="_blank" href="https://www.instagram.com/mub_ashir_lone/"><i class="fa fa-instagram"
                         aria-hidden="true"></i></a>
-                <a href="https://twitter.com/lone_mubashir"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/mubashir-lone-3120301a2"> <i class="fa fa-linkedin"
+                <a target="_blank" href="https://twitter.com/lone_mubashir"><i class="fa fa-twitter"
+                        aria-hidden="true"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/mubashir-lone-3120301a2"> <i class="fa fa-linkedin"
                         aria-hidden="true"></i></a>
                 <a href="https://github.com/mubashirlone"><i class="fa fa-github" aria-hidden="true"></i></a>
 
@@ -80,7 +87,7 @@
             <h4 id="slidedetail">1/9</h4>
             <span id="leftarrow">&#8592;</span>
             <span id="rightarrow">&#8594</span>
-            <div>
+            <div class="simg">
                 <img src="img/1.jpg" alt="" class="slide">
             </div>
 
@@ -88,9 +95,10 @@
 
         <div class="container contact" id="contact">
             <h1>contact</h1>
-            <form>
-                <input type="text" name="name" placeholder="Full name">
-                <input type="email" placeholder="Email">
+            <form method="POST">
+                <p id="form-validation" class=""></p>
+                <input type="text" name="name" placeholder="Full name" />
+                <input type="email" name="email" placeholder="abc@abc.com" id="">
                 <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
                 <input type="submit">
             </form>
@@ -106,6 +114,7 @@
    Latest compiled JavaScript
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  -->
     <script src="main.js"></script>
+    <script src="server.js"></script>
 </body>
 
 </html>

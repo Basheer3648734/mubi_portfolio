@@ -46,3 +46,35 @@ rightarrow.addEventListener('click', () => {
 
 const gototop = document.querySelector(".goToTop");
 // gototop.style.top = "10vh";
+
+//ham-tick1
+const nav = document.querySelector(".nav");
+const hamburger = document.querySelector('.hamburger');
+const ham1 = document.querySelector('#ham1');
+const ham2 = document.querySelector('#ham2');
+const ham3 = document.querySelector('#ham3');
+// hamburger.classList.add('ham-active')
+const main = document.querySelector('.main-info-section');
+let open = 1;
+nav.addEventListener('click', () => {
+    ham1.classList.add('ham-stick1');
+    ham2.classList.add('ham-stick2');
+    ham3.classList.add('ham-stick3');
+})
+hamburger.addEventListener('click', () => {
+    if (open == 1) {
+        ham1.classList.add('ham-stick1');
+        ham2.classList.add('ham-stick2');
+        ham3.classList.add('ham-stick3');
+        nav.classList.remove('nav-closed');
+        // nav.setAttribute('style', 'position:fixed');
+        open = 0;
+    }
+    else if (open == 0) {
+        nav.classList.add('nav-closed');
+        ham1.classList.remove('ham-stick1');
+        ham2.classList.remove('ham-stick2');
+        ham3.classList.remove('ham-stick3');
+        open = 1;
+    }
+})

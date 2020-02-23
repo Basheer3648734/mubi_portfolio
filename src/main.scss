@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
+@mixin mobile{
+    @media screen and(max-width:450px) {
+        @content;
+    }
+}
 html{
     scroll-behavior: smooth;
 }
@@ -21,6 +26,7 @@ body{
     margin: auto;
     /* background-color: blueviolet; */
  margin-top:40px;
+ 
 
 }
 .navbar header{
@@ -33,16 +39,40 @@ body{
         h1{
             font-size:2em;
     font-weight: bold;
+    @include mobile(){
+        font-size: 1em;
+    }
         }
     }
+}
+.nav-closed{
+    // display: none;
+   height: 0px;
+   overflow: hidden;
+   
 }
 nav ul{
     list-style: none;
     display: flex;
     /* margin: 10px; */
     margin-top:25px;
-   
-
+    @include mobile(){
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 50%;
+        z-index: 20;
+        background-color: salmon;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        top: 35%;
+        transform: translate(-50%,-50%);
+        height: 44vh;
+        align-items: center;
+    justify-content: space-around;
+     }
+     
     align-content: center;
     li a{
         margin-left:20px;
@@ -70,11 +100,17 @@ nav ul{
 }
 .text{
     margin:5em;
+    @include mobile(){
+        margin: auto;
+    }
     h4 {
         font-size: 2em;
         font-weight: 500;
         font-family: 'Roboto', sans-serif;
         letter-spacing: 2px;
+        @include mobile(){
+            font-size: 24px;
+        }
         span{
             color:salmon;
             font-weight: bolder;
@@ -84,16 +120,29 @@ nav ul{
     p{
         font-size: 1.4em;
         line-height: 35px;
-
+        font-family: 'Roboto',sans-serif;
         letter-spacing: 2.5px;
+        @include mobile(){
+            font-size: 18px;
+    
+    letter-spacing: 0.8px;
+    line-height: 28px;
+    font-weight: 200;
+
+        }
     }
 }
 .icons{
     // background-color: red;
+    
     font-size: 2.5rem;
     width:50vw;
     display: flex;
     justify-content: space-evenly;
+    @include mobile(){
+        width: 100%;
+        margin: auto;
+    }
     .fa{
         padding:15px 20px;
         color: white;
@@ -105,17 +154,35 @@ nav ul{
         }
     }
 }
+.profile-img{
+    
+    @include mobile(){
+        display: flex;
+        justify-content: center;
+    }
+}
 .profile-img img{
     width:400px;
     height:400px;
     margin-top: 3em;
     margin-right: 120px;
+    @include mobile(){
+        width: 300px;
+        height: 300px;
+        margin: 20px 0 0 0;
+       border-radius: 50%;
+    }
     }
     .main-info-section{
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-rows: 1fr;
       /* background-col+9or: red; */
+      @include mobile(){
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px 0;
+      }
     }
     #about{
         height: 96vh;
@@ -125,24 +192,33 @@ nav ul{
         h1{
             font-family: 'Montserrat';
             font-size: 3rem;
+            @include mobile(){
+                font-size: 35px;
+            }
         }
         .about-me-info{
             // background-color: red;
             padding: 20px 0px;
             ul{
                 list-style: none;
+                @include mobile(){
+                    padding: 0;
+                }
                  li{
                      font-size: 1.5rem;
                      font-family: sans-serif;
                      margin-bottom: 10px;
                      letter-spacing: 1px;
                      line-height: 2rem;
+                     @include mobile(){
+                         font-size: 1.25em;
+                     }
                  }
             }
         }
     }
     .contact{
-        height: 88vh;
+        height: 96vh;
         padding: 2vh 0;
         h1{
             font-family: 'Montserrat';
@@ -157,6 +233,10 @@ nav ul{
          padding: 30px;
             display: flex;
             flex-direction: column;
+            @include  mobile(){
+                width: 90%;
+                padding: 0px;
+            }
             input[type="text"],input[type="email"],textarea
             {
                 margin-bottom: 20px;
@@ -172,8 +252,18 @@ nav ul{
                     opacity: 0.5;
                 }
             }
+            .success,.error{
+                font-family: 'Roboto',sans-serif;
+                font-size:20px;
+                color: rgb(127, 230, 127);
+                text-align: center;
+            }
+ .error{
+     color:rgb(255, 65, 65);
+ }
             input[type="submit"]
             {
+                cursor:pointer;
                 width: 10vw;
                 margin: auto;
                 padding: 15px 10px;
@@ -182,13 +272,15 @@ nav ul{
                 border-radius: 5px;
                 border:none;
                 font-size:20px;
+                @include mobile(){
+                    width: 34vw;
+                }
             }
         }
     }
     footer{
-       height: 5vh;
+       height: 10vh;
     background-color: #999;  
- 
     padding: 10px 30px 20px 0px;
     color: #000;
     // padding-bottom: 100px;
@@ -232,6 +324,10 @@ p{
           background-color: white;
           color: black;
       }
+      @include mobile(){
+        font-size: 35px;
+        background-color: rgba(0, 0, 0, 0.719);
+    }
    }
 //    background-color: red;
    h4{
@@ -250,6 +346,10 @@ p{
     &:hover{
         background-color: white;
         color: black;
+    }
+    @include mobile(){
+        font-size: 35px;
+        background-color: rgba(0, 0, 0, 0.719);
     }
  } 
   
@@ -270,7 +370,11 @@ p{
         transform: translate(-50%,-50%);
         height:inherit;
         width:inherit;   
-    
+     @include mobile(){
+         object-fit: contain;
+         margin-top: 0px;
+         z-index: -1;;
+     }
     }
 }
 
@@ -295,4 +399,46 @@ p{
         color: white;
        
     }
+}
+.hamburger{
+   @include mobile(){
+    height: 20px;
+   width: 20px;
+//  background-color: white;
+  padding: 5px;
+  position: relative;
+    left: 75px;
+    top: 10px;
+    text-align: center;
+   .ham-active{
+       width: 20px;
+       height: 1px;
+       position: relative;
+      margin-bottom: 2px;
+       padding: 2px;
+       background-color: white;
+       z-index: 1;
+       transition: all 1s;
+   }
+   .ham-stick1,.ham-stick2{
+       background-color: white;
+       position: relative;
+       
+       width: 20px;
+       height: 1px;
+       position: absolute;
+       margin-bottom: 2px;
+      
+   }
+   .ham-stick1{
+    transform: rotate(45deg);
+   }
+   .ham-stick2{
+       transform: rotate(-45deg);
+   }
+   .ham-stick3{
+       display: none;
+   }
+   
+}
 }
