@@ -5,6 +5,18 @@
         @content;
     }
 }
+@mixin heightMobile{
+    @media screen and (max-width:900px) and(min-width:449px){
+       @content; 
+    }
+}
+@mixin tablet{
+    @media screen and (max-width:1030px) and (min-width:889px){
+        @content
+    }
+        
+    }
+
 html{
     scroll-behavior: smooth;
 }
@@ -18,6 +30,9 @@ body{
     
     .page1{
         height: 100vh;
+        @include tablet(){
+            height: 55vh;
+        }
     }
     
 }
@@ -26,7 +41,11 @@ body{
     margin: auto;
     /* background-color: blueviolet; */
  margin-top:40px;
- 
+ @include heightMobile(){
+    width: 90vw;
+    overflow: hidden;
+    padding-bottom:25%;
+ }
 
 }
 .navbar header{
@@ -42,14 +61,19 @@ body{
     @include mobile(){
         font-size: 1em;
     }
+    @include heightMobile(){
+        font-size: 18px;
+    }
         }
     }
 }
 .nav-closed{
     // display: none;
-   height: 0px;
-   overflow: hidden;
    
+   overflow: hidden;
+   @include mobile(){
+       height: 0px;
+   }
 }
 nav ul{
     list-style: none;
@@ -101,7 +125,15 @@ nav ul{
 .text{
     margin:5em;
     @include mobile(){
+      
         margin: auto;
+    }
+    @include heightMobile(){
+        margin: auto;
+        margin-top: 30px;
+    }
+    @include tablet(){
+        margin-left: 0em;
     }
     h4 {
         font-size: 2em;
@@ -111,6 +143,12 @@ nav ul{
         @include mobile(){
             font-size: 24px;
         }
+      @include heightMobile(){
+        font-size: 1.4em;
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 2px;
+      }
         span{
             color:salmon;
             font-weight: bolder;
@@ -123,18 +161,25 @@ nav ul{
         font-family: 'Roboto',sans-serif;
         letter-spacing: 2.5px;
         @include mobile(){
-            font-size: 18px;
+            font-size: 15px;
+            
     
-    letter-spacing: 0.8px;
+    letter-spacing: 0.7px;
     line-height: 28px;
     font-weight: 200;
 
+        }
+        @include heightMobile(){
+            font-size: 100%;
+            line-height: 153%;
         }
     }
 }
 .icons{
     // background-color: red;
-    
+    @include heightMobile(){
+        font-size:1.5em;
+    }
     font-size: 2.5rem;
     width:50vw;
     display: flex;
@@ -142,6 +187,9 @@ nav ul{
     @include mobile(){
         width: 100%;
         margin: auto;
+    }
+    @include tablet(){
+        width: 84vw;
     }
     .fa{
         padding:15px 20px;
@@ -172,6 +220,11 @@ nav ul{
         margin: 20px 0 0 0;
        border-radius: 50%;
     }
+    @include heightMobile(){
+        width: 106%;
+    height: 69%;
+    margin-top: 0em;
+    }
     }
     .main-info-section{
         display: grid;
@@ -189,16 +242,26 @@ nav ul{
         margin: auto;
         // background-color: red;
         padding: 2vh 30px;
+        @include tablet(){
+            height: 85vh;
+        }
         h1{
             font-family: 'Montserrat';
             font-size: 3rem;
             @include mobile(){
                 font-size: 35px;
             }
+            @include heightMobile(){
+                font-size: 3em;
+                margin-bottom: 15px;
+            }
         }
         .about-me-info{
             // background-color: red;
             padding: 20px 0px;
+            @include heightMobile(){
+                padding: 5px 0px;
+            }
             ul{
                 list-style: none;
                 @include mobile(){
@@ -213,6 +276,14 @@ nav ul{
                      @include mobile(){
                          font-size: 1.25em;
                      }
+                     @include heightMobile(){
+                         font-size: 1.3em;
+                     }
+                     @include tablet(){
+                         font-size:2em ;
+                         margin-bottom: 61px;
+                         line-height: 1.7em;
+                     }
                  }
             }
         }
@@ -224,7 +295,13 @@ nav ul{
             font-family: 'Montserrat';
             font-size: 3rem;
             text-align: center;
-        
+        @include heightMobile(){
+            margin-bottom: 0;
+            font-size: 2.5em;
+        }
+        @include tablet(){
+            font-size: 5em;
+        }
         }
         form{
             width: 50%;
@@ -236,6 +313,12 @@ nav ul{
             @include  mobile(){
                 width: 90%;
                 padding: 0px;
+            }
+            @include heightMobile(){
+                padding:0px ;
+            }
+            @include tablet(){
+                width: 95%;
             }
             input[type="text"],input[type="email"],textarea
             {
@@ -251,12 +334,18 @@ nav ul{
                     color: white;
                     opacity: 0.5;
                 }
+                @include tablet(){
+                    font-size: 1.8em;
+                }
             }
             .success,.error{
                 font-family: 'Roboto',sans-serif;
                 font-size:20px;
                 color: rgb(127, 230, 127);
                 text-align: center;
+                @include tablet(){
+                    font-size: 1.8em;
+                }
             }
  .error{
      color:rgb(255, 65, 65);
@@ -275,6 +364,13 @@ nav ul{
                 @include mobile(){
                     width: 34vw;
                 }
+                @include heightMobile(){
+                    width:16vw;
+                }
+                @include tablet(){
+                    width: 14vw;
+                    font-size: 2em;
+                }
             }
         }
     }
@@ -287,6 +383,9 @@ nav ul{
 p{
     font-size: 20px;
     margin-left:20px;
+    @include tablet(){
+        font-size: 2em;
+    }
 } 
 }
 .gallery{
@@ -295,7 +394,14 @@ p{
     overflow: hidden;
     margin-bottom: 30px;
     position: relative;
-    
+    @include tablet(){
+        height: 87vh;
+    }
+    .smg{
+        @include heightMobile(){
+            height: 306px;
+        }
+    }
    h1{
     font-family: 'Montserrat';
     // background-color: green;
@@ -305,7 +411,12 @@ p{
     margin: auto;
     padding-bottom: 10px;
     border-bottom: 2px solid red; 
-    
+    @include heightMobile(){
+        font-size:2.5em;
+    }
+    @include tablet(){
+        font-size: 5em;
+    }
    }
    span{
        position: absolute;
@@ -319,6 +430,9 @@ p{
       
       padding:5px 10px;
       border-radius: 5px;
+      @include tablet(){
+          left: 0%;
+      }
     //   background-color: red;
       &:hover{
           background-color: white;
@@ -336,6 +450,9 @@ p{
     font-family: 'Roboto';
     // margin-top: 50px;
     z-index: 10;
+    @include tablet(){
+        font-size: 2.2em;
+    }
    }
    #rightarrow{
     position: absolute;
@@ -346,6 +463,9 @@ p{
     &:hover{
         background-color: white;
         color: black;
+    }
+    @include tablet(){
+        right: 0%;
     }
     @include mobile(){
         font-size: 35px;
@@ -375,6 +495,11 @@ p{
          margin-top: 0px;
          z-index: -1;;
      }
+     @include heightMobile(){
+         height: 69%;
+         width:51%;
+         top:57%
+     }
     }
 }
 
@@ -391,13 +516,28 @@ p{
  z-index:10;
 //  overflow: hidden;
 // scroll-behavior: smooth;
+@include mobile(){
+    display: none;
+}
+@include heightMobile(){
+    display: none;
+}
+@include tablet(){
+width: 80px;
+height: 80px;
+top: 101vh;
+}
     #goToTop{
         height: 50px;
         width: 50px;
         font-size: 35px;
         text-decoration: none;
         color: white;
-       
+       @include tablet(){
+           height: 90px;
+           width: 90px;
+           font-size: 4em;
+       }
     }
 }
 .hamburger{

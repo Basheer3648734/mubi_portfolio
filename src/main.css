@@ -15,11 +15,25 @@ body .page1 {
   height: 100vh;
 }
 
+@media screen and (max-width: 1030px) and (min-width: 889px) {
+  body .page1 {
+    height: 55vh;
+  }
+}
+
 .main-container {
   width: 80%;
   margin: auto;
   /* background-color: blueviolet; */
   margin-top: 40px;
+}
+
+@media screen and (max-width: 900px) and (min-width: 449px) {
+  .main-container {
+    width: 90vw;
+    overflow: hidden;
+    padding-bottom: 25%;
+  }
 }
 
 .navbar header {
@@ -49,9 +63,20 @@ body .page1 {
   }
 }
 
+@media screen and (max-width: 900px) and (min-width: 449px) {
+  .navbar header .logo h1 {
+    font-size: 18px;
+  }
+}
+
 .nav-closed {
-  height: 0px;
   overflow: hidden;
+}
+
+@media screen and (max-width: 450px) {
+  .nav-closed {
+    height: 0px;
+  }
 }
 
 nav ul {
@@ -140,6 +165,19 @@ nav ul li a:hover {
   }
 }
 
+@media screen and (max-width: 900px) and (min-width: 449px) {
+  .text {
+    margin: auto;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1030px) and (min-width: 889px) {
+  .text {
+    margin-left: 0em;
+  }
+}
+
 .text h4 {
   font-size: 2em;
   font-weight: 500;
@@ -150,6 +188,15 @@ nav ul li a:hover {
 @media screen and (max-width: 450px) {
   .text h4 {
     font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 449px) {
+  .text h4 {
+    font-size: 1.4em;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
   }
 }
 
@@ -168,10 +215,17 @@ nav ul li a:hover {
 
 @media screen and (max-width: 450px) {
   .text p {
-    font-size: 18px;
-    letter-spacing: 0.8px;
+    font-size: 15px;
+    letter-spacing: 0.7px;
     line-height: 28px;
     font-weight: 200;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 449px) {
+  .text p {
+    font-size: 100%;
+    line-height: 153%;
   }
 }
 
@@ -186,10 +240,22 @@ nav ul li a:hover {
           justify-content: space-evenly;
 }
 
+@media screen and (max-width: 900px) and (min-width: 449px) {
+  .icons {
+    font-size: 1.5em;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .icons {
     width: 100%;
     margin: auto;
+  }
+}
+
+@media screen and (max-width: 1030px) and (min-width: 889px) {
+  .icons {
+    width: 84vw;
   }
 }
 
@@ -231,6 +297,14 @@ nav ul li a:hover {
   }
 }
 
+@media screen and (max-width: 900px) and (min-width: 449px) {
+  .profile-img img {
+    width: 106%;
+    height: 69%;
+    margin-top: 0em;
+  }
+}
+
 .main-info-section {
   display: -ms-grid;
   display: grid;
@@ -260,6 +334,12 @@ nav ul li a:hover {
   padding: 2vh 30px;
 }
 
+@media screen and (max-width: 1030px) and (min-width: 889px) {
+  #about {
+    height: 85vh;
+  }
+}
+
 #about h1 {
   font-family: 'Montserrat';
   font-size: 3rem;
@@ -271,8 +351,21 @@ nav ul li a:hover {
   }
 }
 
+@media screen and (max-width: 900px) and (min-width: 449px) {
+  #about h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+  }
+}
+
 #about .about-me-info {
   padding: 20px 0px;
+}
+
+@media screen and (max-width: 900px) and (min-width: 449px) {
+  #about .about-me-info {
+    padding: 5px 0px;
+  }
 }
 
 #about .about-me-info ul {
@@ -299,6 +392,20 @@ nav ul li a:hover {
   }
 }
 
+@media screen and (max-width: 900px) and (min-width: 449px) {
+  #about .about-me-info ul li {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 1030px) and (min-width: 889px) {
+  #about .about-me-info ul li {
+    font-size: 2em;
+    margin-bottom: 61px;
+    line-height: 1.7em;
+  }
+}
+
 .contact {
   height: 96vh;
   padding: 2vh 0;
@@ -308,6 +415,19 @@ nav ul li a:hover {
   font-family: 'Montserrat';
   font-size: 3rem;
   text-align: center;
+}
+
+@media screen and (max-width: 900px) and (min-width: 449px) {
+  .contact h1 {
+    margin-bottom: 0;
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 1030px) and (min-width: 889px) {
+  .contact h1 {
+    font-size: 5em;
+  }
 }
 
 .contact form {
@@ -327,6 +447,18 @@ nav ul li a:hover {
   .contact form {
     width: 90%;
     padding: 0px;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 449px) {
+  .contact form {
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 1030px) and (min-width: 889px) {
+  .contact form {
+    width: 95%;
   }
 }
 
@@ -361,11 +493,23 @@ nav ul li a:hover {
   opacity: 0.5;
 }
 
+@media screen and (max-width: 1030px) and (min-width: 889px) {
+  .contact form input[type="text"], .contact form input[type="email"], .contact form textarea {
+    font-size: 1.8em;
+  }
+}
+
 .contact form .success, .contact form .error {
   font-family: 'Roboto',sans-serif;
   font-size: 20px;
   color: #7fe67f;
   text-align: center;
+}
+
+@media screen and (max-width: 1030px) and (min-width: 889px) {
+  .contact form .success, .contact form .error {
+    font-size: 1.8em;
+  }
 }
 
 .contact form .error {
@@ -390,6 +534,19 @@ nav ul li a:hover {
   }
 }
 
+@media screen and (max-width: 900px) and (min-width: 449px) {
+  .contact form input[type="submit"] {
+    width: 16vw;
+  }
+}
+
+@media screen and (max-width: 1030px) and (min-width: 889px) {
+  .contact form input[type="submit"] {
+    width: 14vw;
+    font-size: 2em;
+  }
+}
+
 footer {
   height: 10vh;
   background-color: #999;
@@ -402,12 +559,30 @@ footer p {
   margin-left: 20px;
 }
 
+@media screen and (max-width: 1030px) and (min-width: 889px) {
+  footer p {
+    font-size: 2em;
+  }
+}
+
 .gallery {
   height: 100vh;
   padding: 0px 10px;
   overflow: hidden;
   margin-bottom: 30px;
   position: relative;
+}
+
+@media screen and (max-width: 1030px) and (min-width: 889px) {
+  .gallery {
+    height: 87vh;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 449px) {
+  .gallery .smg {
+    height: 306px;
+  }
 }
 
 .gallery h1 {
@@ -422,6 +597,18 @@ footer p {
   border-bottom: 2px solid red;
 }
 
+@media screen and (max-width: 900px) and (min-width: 449px) {
+  .gallery h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 1030px) and (min-width: 889px) {
+  .gallery h1 {
+    font-size: 5em;
+  }
+}
+
 .gallery span {
   position: absolute;
   font-size: 50px;
@@ -433,6 +620,12 @@ footer p {
   left: 10%;
   padding: 5px 10px;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 1030px) and (min-width: 889px) {
+  .gallery #leftarrow {
+    left: 0%;
+  }
 }
 
 .gallery #leftarrow:hover {
@@ -454,6 +647,12 @@ footer p {
   z-index: 10;
 }
 
+@media screen and (max-width: 1030px) and (min-width: 889px) {
+  .gallery h4 {
+    font-size: 2.2em;
+  }
+}
+
 .gallery #rightarrow {
   position: absolute;
   top: 50%;
@@ -465,6 +664,12 @@ footer p {
 .gallery #rightarrow:hover {
   background-color: white;
   color: black;
+}
+
+@media screen and (max-width: 1030px) and (min-width: 889px) {
+  .gallery #rightarrow {
+    right: 0%;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -502,6 +707,14 @@ footer p {
   }
 }
 
+@media screen and (max-width: 900px) and (min-width: 449px) {
+  .gallery img {
+    height: 69%;
+    width: 51%;
+    top: 57%;
+  }
+}
+
 .goToTop {
   width: 50px;
   height: 50px;
@@ -516,12 +729,40 @@ footer p {
   z-index: 10;
 }
 
+@media screen and (max-width: 450px) {
+  .goToTop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 449px) {
+  .goToTop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1030px) and (min-width: 889px) {
+  .goToTop {
+    width: 80px;
+    height: 80px;
+    top: 101vh;
+  }
+}
+
 .goToTop #goToTop {
   height: 50px;
   width: 50px;
   font-size: 35px;
   text-decoration: none;
   color: white;
+}
+
+@media screen and (max-width: 1030px) and (min-width: 889px) {
+  .goToTop #goToTop {
+    height: 90px;
+    width: 90px;
+    font-size: 4em;
+  }
 }
 
 @media screen and (max-width: 450px) {
