@@ -548,13 +548,14 @@ nav ul li a:hover {
 }
 
 footer {
-  height: 8vh;
-  margin-top: 10vh;
+  height: 10vh;
+  margin-top: 20vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #999;
-  padding: 10px 30px 20px 0px;
+  padding: 2px 30px 20px 0px;
   color: #000;
+  opacity: 0.5;
   z-index: -10;
 }
 
