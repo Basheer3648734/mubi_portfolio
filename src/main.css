@@ -649,6 +649,8 @@ footer p {
   font-size: 20px;
   text-align: center;
   font-family: 'Roboto';
+  margin-bottom: 20px;
+  opacity: 0.8;
   z-index: 10;
 }
 
