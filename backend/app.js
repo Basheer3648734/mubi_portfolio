@@ -1,5 +1,6 @@
 const express = require('express');
 const fs = require('fs');
+require('dotenv').config()
 const path = require('path');
 const validator = require('validator')
 const User = require('./database/user');
